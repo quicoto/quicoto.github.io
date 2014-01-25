@@ -1,0 +1,4 @@
+[
+	{"id": 1, "name": "White Collar", "feed": "http://ezrss.it/search/index.php?simple&show_name=White+Collar&mode=rss"},
+	{"id": 2, "name": "Shameless US", "feed": "http://ezrss.it/search/index.php?show_name=Shameless+US&date=&quality=&release_group=&mode=rss"}
+]

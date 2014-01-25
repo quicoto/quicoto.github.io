@@ -1,5 +1,9 @@
 angular.module('SeriesApp', [])
 
+    /*
+        Create the Google Feed API service
+    */
+
     .factory('FeedService',['$http',function($http){
         return {
             parseFeed : function(url){
@@ -8,25 +12,30 @@ angular.module('SeriesApp', [])
         }
     }])
 
-    .controller("FeedCtrl", ['$scope','FeedService', function ($scope,Feed) {    
+    .controller("FeedCtrl", ['$scope','FeedService', '$http', function ($scope, Feed, $http) {    
+
+        /* My Series Object */
+
+
+        $http.get('/feeds.json').success(function(data) {
+            $scope.myFeeds = data;
+        });
         
-        var myFeeds = [
-           'http://ezrss.it/search/index.php?simple&show_name=White+Collar&mode=rss'
-           //'http://www.quicoto.com/feed/'
 
-        ];
+        /* Loop through the Series Object */
 
+         angular.forEach($scope.myFeeds, function(myFeed) {
 
-        var seriesLength = myFeeds.length;
+            // Call the service
 
-        for (var i = 0; i < seriesLength; i++) {                               
-          
-            Feed.parseFeed(myFeeds[i]).then(function(res){
+            //console.log(myFeed.feed);
+            
+            Feed.parseFeed(myFeed.feed).then(function(response){
                 
-                $scope.feeds=res.data.responseData.feed.entries;
+                myFeed.content = response.data.responseData.feed.entries;
 
             });  
 
-        }           
+        });         
 
     }]);
