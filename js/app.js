@@ -17,25 +17,34 @@ angular.module('SeriesApp', [])
         /* My Series Object */
 
 
-        $http.get('/feeds.json').success(function(data) {
+        $http({
+          method: 'GET',
+          url: 'feeds.json'
+        }).success(function(data) { // This is called when the response is
+            
             $scope.myFeeds = data;
-        });
+
+            /* Loop through the Series Object */
+
+             angular.forEach($scope.myFeeds, function(myFeed) {
+
+                // Call the service
+                
+                Feed.parseFeed(myFeed.feed).then(function(response){
+                    
+                    myFeed.content = response.data.responseData.feed.entries;
+
+                });  
+
+            });     
+
         
 
-        /* Loop through the Series Object */
 
-         angular.forEach($scope.myFeeds, function(myFeed) {
-
-            // Call the service
-
-            //console.log(myFeed.feed);
+        }).error(function(data) { // This is called when the response
             
-            Feed.parseFeed(myFeed.feed).then(function(response){
-                
-                myFeed.content = response.data.responseData.feed.entries;
+            console.log('Error loading the jSON file');
 
-            });  
-
-        });         
+        });
 
     }]);
