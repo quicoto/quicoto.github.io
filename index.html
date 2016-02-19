@@ -16,13 +16,31 @@
         h3 {
             margin-bottom: 20px;
         }
+
+        .avatar {
+            max-width: 40px;
+        }
+
+        @media (max-width: 768px){
+            .avatar {
+                max-width: 150px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            h1 span {
+                padding-top: 20px;
+                display: block;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
 	<header class="container">
         <div class="page-header">
-          <h1>Ricard's Github</h1>
+          <h1><img src="assets/img/avatar.png" class="img-circle avatar" alt="avatar"> <span>Ricard's Github</span></h1>
         </div>
 	</header>
 
