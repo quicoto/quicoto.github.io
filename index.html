@@ -7,30 +7,46 @@
     <title>Ricard's Github</title>
     <meta name="theme-color" content="#3498db">
     <meta name="robots" content="noindex nofollow" />
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        ul li {
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
 
-	<header>
-		<h1>
-		    Ricard's Github
-		</h1>
+	<header class="container">
+        <div class="page-header">
+          <h1>Ricard's Github</h1>
+        </div>
 	</header>
 
-	<section>
-		<p>
-		    <img src="assets/img/nothing-to-see-here.gif" alt="Nothing to see here" style="width: 500px;">
-		</p>
+	<section class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-push-6 col-md-6 col-md-push-6">
+              <h3>Check this out</h3>
+
+                <ul>
+                    <li><a target="_blank" href="https://github.com/quicoto" class="Code, code code!">Github.com/quicoto</a></li>
+                    <li><a target="_blank" href="http://www.ricardtorres.com/" title="Personal Blog">Ricard's Ramblings</a></li>
+                    <li><a target="_blank" href="https://twitter.com/ricard_dev" title="Twitter">Twitter @ricard_dev</a></li>
+                    <li><a target="_blank" href="https://php.quicoto.com/" title="Blog">Rick's Code</a></li>
+                </ul>
+          </div>
+          <!-- links -->
+
+          <div class="col-sm-6 col-sm-pull-6 col-md-6 col-md-pull-6">
+              <img src="assets/img/nothing-to-see-here.gif" alt="Nothing to see here" class="img-responsive" style="width: 500px;">
+          </div>
+          <!-- gif -->
+        </div>
+        <!-- /.row -->
 	</section>
-
-	<aside>
-		<h2>About section</h2>
-		<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	</aside>
-
-	<footer>
-		<p><a href="#">https://github.com/quicoto</a></p>
-	</footer>
 
 </body>
 </html>
