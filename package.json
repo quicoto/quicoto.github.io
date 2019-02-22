@@ -1,0 +1,35 @@
+{
+  "name": "ricard.dev",
+  "version": "1.0.0",
+  "description": "Ricard Torres",
+  "author": "Ricard Torres",
+  "license": "GPL-2.0",
+  "private": true,
+  "scripts": {
+    "build": "npm-run-all lint css js",
+    "css": "npm-run-all css:precompileReset css:precompileStyles css:autoprefix minifyReset minifyStyles",
+    "css:autoprefix": "postcss --use autoprefixer --no-map --replace dist/css/styles.css",
+    "css:precompileStyles": "node-sass --omitSourceMapUrl true -i source/scss/styles.scss -o dist/css/",
+    "css:precompileReset": "node-sass --omitSourceMapUrl true -i source/scss/reset.scss -o dist/css/",
+    "js": "npm-run-all js:minifyMain",
+    "js:minifyMain": "uglifyjs --compress --mangle --output \"dist/js/main.min.js\" -- \"source/js/main.js\"",
+    "lint": "stylelint \"source/scss/styles.scss\"",
+    "watch:css": "npm run lint css && onchange \"style.scss\" -- npm-run-all lint css",
+    "minifyReset": "postcss dist/css/reset.css -o dist/css/reset.css",
+    "minifyStyles": "postcss dist/css/styles.css -o dist/css/styles.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.8",
+    "cssnano": "^4.1.10",
+    "node-sass": "4.11.0",
+    "npm-run-all": "4.1.5",
+    "onchange": "5.2.0",
+    "postcss-cli": "6.1.1",
+    "stylelint": "9.10.1",
+    "stylelint-config-standard": "18.2.0",
+    "uglify-es": "^3.3.9"
+  },
+  "engines": {
+    "node": "^8.0"
+  }
+}
