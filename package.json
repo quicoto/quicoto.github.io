@@ -12,7 +12,7 @@
     "css:precompileStyles": "node-sass --omitSourceMapUrl true -i source/scss/styles.scss -o dist/css/",
     "css:precompileReset": "node-sass --omitSourceMapUrl true -i source/scss/reset.scss -o dist/css/",
     "js": "npm-run-all js:minifyMain",
-    "js:minifyMain": "uglifyjs --compress --mangle --output \"dist/js/main.min.js\" -- \"source/js/main.js\"",
+    "js:minifyMain": "uglifyjs \"source/js/main.js\" -c -m -o \"dist/js/main.min.js\"",
     "lint": "stylelint \"source/scss/styles.scss\"",
     "watch:css": "npm run lint css && onchange \"source/scss/**.scss\" -- npm-run-all lint css",
     "minifyReset": "postcss dist/css/reset.css -o dist/css/reset.css",

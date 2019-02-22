@@ -16,20 +16,25 @@
     <meta name="theme-color" content="#e74c3c">
 
     <link rel="stylesheet" href="dist/css/reset.css">
-    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet" href="dist/css/styles.css?ver=1.0.0">
 </head>
 <body>
     <main>
         <header>
-            <nav>
+            <nav class="container">
                 <span class="special-font brand-name">Ricard.dev</span>
             </nav>
         </header>
-        <section>
-            <h1>Hi! I'm Ricard</h1>
-            <h2>Senior Front-end Software Engineer</h2>
+        <section class="hero" style="background-image: url('dist/img/hero-3.jpg');">
+            <div>
+                <div class="profile-photoWrapper">
+                    <img class="profile-photo" src="dist/img/ricard-torres-profile.jpg" alt="Ricard Torres profile photo">
+                </div>
+                <h1 class="hero-title">Hi! I'm Ricard</h1>
+                <h2 class="hero-subtitle">Senior Front-end Software Engineer</h2>
+            </div>
         </section>
-        <section class="container">
+        <section class="container content">
             <h3>Where do I work?</h3>
             <p><a href="https://www.netcentric.biz/" title="Where Ricard Torres works">Netcentric</a></p>
 
@@ -54,7 +59,9 @@
             </ul>
         </section>
         <footer>
-            with ❤️ Ricard Torres
+            <div class="container">
+                With love from Ricard Torres - Like it? <a href="https://github.com/quicoto/quicoto.github.io" title="Ricard.dev on Github">Fork it!</a>
+            </div>
         </footer>
     </main>
 </body>

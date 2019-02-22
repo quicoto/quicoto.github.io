@@ -9,7 +9,7 @@ $font-weight-base: 400;
 $font-weight-bolder: 600;
 $line-height-base: 1;
 
-$body-bg: #bdc3c7;
+$body-bg: #ecf0f1;
 $body-color: #2c3e50;
 
 $link-color: $primary;
@@ -19,3 +19,5 @@ $link-hover-decoration: underline;
 
 $paragraph-margin-bottom: 15px;
 $headings-margin-bottom: 30px;
+
+@import '_mediaqueries';
