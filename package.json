@@ -14,7 +14,7 @@
     "js": "npm-run-all js:minifyMain",
     "js:minifyMain": "uglifyjs --compress --mangle --output \"dist/js/main.min.js\" -- \"source/js/main.js\"",
     "lint": "stylelint \"source/scss/styles.scss\"",
-    "watch:css": "npm run lint css && onchange \"style.scss\" -- npm-run-all lint css",
+    "watch:css": "npm run lint css && onchange \"source/scss/**.scss\" -- npm-run-all lint css",
     "minifyReset": "postcss dist/css/reset.css -o dist/css/reset.css",
     "minifyStyles": "postcss dist/css/styles.css -o dist/css/styles.css"
   },
