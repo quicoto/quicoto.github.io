@@ -1,0 +1,13 @@
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+
+  &-twitter {
+    margin-right: 10px;
+  }
+}

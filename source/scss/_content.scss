@@ -1,4 +1,30 @@
 .content {
   padding-bottom: 30px;
   padding-top: 30px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    padding-bottom: 5px;
+  }
+
+  &-title {
+    margin-top: 15px;
+
+    @media (min-width: $desktop-mq) {
+      margin-top: 0;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  min-width: 250px;
 }

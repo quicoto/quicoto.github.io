@@ -1,6 +1,7 @@
 {
     "name": "Ricard Torres",
     "short_name": "Ricard.dev",
+    "display": "minimal-ui",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -13,6 +14,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#e74c3c",
-    "background_color": "#e74c3c"
+    "theme_color": "#e0321f",
+    "background_color": "#e0321f"
 }

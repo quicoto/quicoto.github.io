@@ -3,4 +3,20 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+
+  .fork {
+    display: block;
+
+    @media (min-width: $desktop-mq) {
+      display: inline-block;
+    }
+
+    &-separator {
+      display: none;
+
+      @media (min-width: $desktop-mq) {
+        display: inline-block;
+      }
+    }
+  }
 }
