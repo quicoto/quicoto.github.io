@@ -6,11 +6,12 @@
   "license": "GPL-2.0",
   "private": true,
   "scripts": {
-    "build": "npm-run-all lint css js",
+    "build": "npm-run-all html lint css js",
     "css": "npm-run-all css:precompileReset css:precompileStyles css:autoprefix minifyReset minifyStyles",
     "css:autoprefix": "postcss --use autoprefixer --no-map --replace dist/css/styles.css",
     "css:precompileStyles": "node-sass --omitSourceMapUrl true -i source/scss/styles.scss -o dist/css/",
     "css:precompileReset": "node-sass --omitSourceMapUrl true -i source/scss/reset.scss -o dist/css/",
+    "html": "html-minifier source/index.html -o index.html --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true",
     "js": "npm-run-all js:minifyMain",
     "js:minifyMain": "uglifyjs \"source/js/main.js\" -c -m -o \"dist/js/main.min.js\"",
     "lint": "stylelint \"source/scss/styles.scss\"",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "autoprefixer": "^9.4.8",
     "cssnano": "^4.1.10",
+    "html-minifier": "^3.5.21",
     "node-sass": "4.11.0",
     "npm-run-all": "4.1.5",
     "onchange": "5.2.0",
