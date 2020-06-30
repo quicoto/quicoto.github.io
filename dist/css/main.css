@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+
+header {
+  background: #d63031;
+  padding: 10rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
