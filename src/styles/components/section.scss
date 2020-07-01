@@ -22,7 +22,13 @@ section {
     justify-content: center;
 
     svg {
-      width: 300px;
+      margin-top: 2rem;
+      width: 100px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+        width: 300px;
+      }
     }
   }
 
