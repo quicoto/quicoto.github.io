@@ -1,8 +1,25 @@
 header {
-  background: $primary;
-  padding: 10rem;
-}
+  padding-top: 6rem;
+  transform: skewY(-$skew);
 
-h1 {
-  font-size: 5rem;
+  h1,
+  h2 {
+    transform: skewY($skew);
+  }
+
+  h1 {
+    font-size: 6rem;
+
+    @media (min-width: $screen-md) {
+      font-size: 10rem;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+
+    @media (min-width: $screen-md) {
+      font-size: 7rem;
+    }
+  }
 }

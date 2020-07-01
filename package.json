@@ -7,6 +7,7 @@
     "build": "NODE_ENV=production npm-run-all clean --parallel build:*",
     "build:css": "gulp css",
     "build:html": "gulp html",
+    "build:assets": "gulp assets",
     "clean": "gulp clean",
     "serve": "NODE_ENV=development npm-run-all clean --parallel build:* && gulp serve",
     "watch": "NODE_ENV=development npm-run-all clean --parallel build:* && gulp watch",

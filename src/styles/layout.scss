@@ -1,3 +1,56 @@
+html {
+  font-size: 10px;
+}
+
 body {
+  color: $dark;
+  background-color: $dark;
+  font-size: 1.6rem;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
   margin: 0;
+  transform: translateY(-4rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+b,
+strong {
+  font-weight: 600;
+}
+
+h4,
+h5 {
+  font-weight: 400;
+}
+
+svg {
+  max-width: 100%;
+}
+
+header,
+section {
+  padding: 3rem;
+
+  @media (min-width: $screen-md) {
+    padding: 10rem;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 10rem 20rem;
+  }
+
+  @media (min-width: $screen-xlg) {
+    padding: 10rem 30rem;
+  }
 }

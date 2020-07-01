@@ -1,0 +1,59 @@
+$angle: -135deg;
+
+.bg-header {
+  background-image: linear-gradient($angle, #348f50, #56b4d3);
+}
+
+.bg-one {
+  background-image: linear-gradient($angle, #de6262, #ffb88c);
+
+  @media (min-width: $screen-md) {
+    .graphic {
+      text-align: right;
+    }
+  }
+
+  .graphic svg {
+    height: 27rem;
+  }
+}
+
+.bg-two {
+  flex-direction: row-reverse;
+  background-image: linear-gradient($angle, #e55d87, #5fc3e4);
+}
+
+.bg-three {
+  background-image: linear-gradient($angle, #185a9d, #43cea2);
+
+  @media (min-width: $screen-md) {
+    .graphic {
+      text-align: right;
+    }
+  }
+}
+
+.bg-four {
+  flex-direction: row-reverse;
+  background-image: linear-gradient($angle, #de6262, #ffb88c);
+}
+
+.bg-five {
+  background-image: linear-gradient($angle, #2bc0e4, #eaecc6);
+
+  @media (min-width: $screen-md) {
+    .graphic {
+      text-align: right;
+    }
+  }
+}
+
+.bg-seven {
+  background-image: linear-gradient($angle, #e5e5be 50%, #003973);
+
+  @media (min-width: $screen-md) {
+    .graphic {
+      text-align: right;
+    }
+  }
+}
